@@ -5,9 +5,10 @@ function Arrayify() {
 	let input = document.querySelectorAll('#csv')[0].value.split('\n');
 	let a = []
 	input.forEach(element => {
-		let e = element.split(',')
-		a.push(e[0]);
-		a.push(e[1]);
+		let e = element.split(';')
+		e.forEach((asd) => {
+			a.push(asd)
+		})
 	})
 	for (let i = 0; i < a.length; i += 2) {
 		array.push(a[i]);
