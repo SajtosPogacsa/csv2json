@@ -1,4 +1,5 @@
 const form = document.querySelector('form');
+const json = document.getElementById('json');
 let array = [];
 
 function Arrayify() {
@@ -22,4 +23,7 @@ form.addEventListener('submit', (e) => {
 	e.preventDefault();
 	array = [];
 	Arrayify();
+	let data =JSON.stringify(array)
+	json.innerHTML = `${JSON.parse(data)}`;
+	console.log(JSON.parse(data))
 })
